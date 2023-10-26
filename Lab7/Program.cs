@@ -7,21 +7,20 @@ namespace Lab7
         static void Main(string[] args)
         {
 
+
             
-            Geometri[] former = new Geometri[5];
-
-            former[0] = new Rektangel();
-            former[1] = new Fyrkant();
-            former[2] = new Cirkel();
-            former[3] = new Parallellogram();
-            former[4] = new Ellips();
-
-            foreach (var form in former)
+            List<Geometri> list = new()
             {
-                Console.WriteLine(form.Area());
+                new Fyrkant(),
+                new Cirkel(),
+                new Rektangel(),
+                new Ellips(),
+                new Parallellogram()
+            };
+            foreach (var item in list)
+            {
+                Console.WriteLine(item.Area());
             }
-
-
         }
     }
 }
